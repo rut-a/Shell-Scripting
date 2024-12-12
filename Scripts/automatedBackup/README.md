@@ -20,21 +20,21 @@ Automated Incremental Backup Script
 
 3. How to use 
 
-1. Save the script to /usr/local/bin/backup.sh and make it executable:
+	 Save the script to /usr/local/bin/backup.sh and make it executable:
 
-	sudo chmod +x /usr/local/bin/backup.sh
+		sudo chmod +x /usr/local/bin/backup.sh
 	
-2. Create necessary directories and set permissions:
+	Create necessary directories and set permissions:
 
-	sudo mkdir -p /var/backup
-	sudo mkdir -p /var/log/backup
-	sudo chmod 755 /var/backup
-	sudo chmod 755 /var/log/backup
-	
-3. Edit the crontab file:
+		sudo mkdir -p /var/backup
+		sudo mkdir -p /var/log/backup
+		sudo chmod 755 /var/backup
+		sudo chmod 755 /var/log/backup
+		
+	Edit the crontab file:
 
-	sudo crontab -e
+		sudo crontab -e
 
-4. Add a cron schedule that works for you: (I scheduled it to run at 6 am everyday)
+	Add a cron schedule that works for you: (I scheduled it to run at 6 am everyday)
 
-	0 6 * * * /usr/local/bin/backup.sh
+		0 6 * * * /usr/local/bin/backup.sh
